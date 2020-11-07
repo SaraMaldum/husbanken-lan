@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import lan from '../../assets/lan.json';
 
@@ -7,8 +7,12 @@ import lan from '../../assets/lan.json';
   templateUrl: './lan-liste.component.html',
   styleUrls: ['./lan-liste.component.scss'],
 })
-export class LanListeComponent {
+export class LanListeComponent implements OnInit {
+  lan = lan.lan;
+
   constructor() {
-    console.log(lan);
+    console.log(lan.lan);
   }
+
+  ngOnInit() {}
 }
