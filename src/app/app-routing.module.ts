@@ -5,7 +5,7 @@ import { LanDetaljerComponent } from './lan-detaljer/lan-detaljer.component';
 
 const routes: Routes = [
   { path: '', component: LanListeComponent },
-  { path: 'detail/:id', component: LanDetaljerComponent },
+  { path: 'detaljer/:id', component: LanDetaljerComponent },
 ];
 
 @NgModule({
