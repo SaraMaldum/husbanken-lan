@@ -3,3 +3,12 @@ h1 {
   color: #4f7335;
   margin: 20px;
 }
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #82b55d;
+}
+.active-link {
+  color: #4f7335;
+  border-bottom: 3px solid #82b55d;
+}
