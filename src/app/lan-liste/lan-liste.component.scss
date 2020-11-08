@@ -1,1 +1,26 @@
+h2 {
+  color: #82b55d;
+}
 
+h3 {
+  color: #2b4554;
+}
+
+.card {
+  border: 1px solid #2b4554;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  height: 90%;
+}
+.btn {
+  background-color: #2b4554;
+  color: white;
+  border: 3px solid #2b4554;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn:hover {
+  color: #2b4554;
+  background-color: white;
+}

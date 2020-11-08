@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import lan from '../../assets/lan.json';
 
@@ -8,10 +9,15 @@ import lan from '../../assets/lan.json';
   styleUrls: ['./lan-detaljer.component.scss'],
 })
 export class LanDetaljerComponent implements OnInit {
-  lan = lan.lan;
+  lanArray = lan.lan;
+  item;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     console.log(lan.lan);
+
+    this.route.paramMap.subscribe((params) => {
+      this.item = this.lanArray.find((item) => item.id === +params.get('id'));
+    });
   }
 
   ngOnInit() {}

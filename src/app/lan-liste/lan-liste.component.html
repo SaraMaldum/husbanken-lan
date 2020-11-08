@@ -1,12 +1,26 @@
 <div class="container">
   <h2>Oversikt</h2>
 
-  <ul>
-    <li *ngFor="let element of lan; index as id">
-      {{ element.lanetakere }}
-      <button routerLink="/detaljer/{{ element.id }}">
-        Rediger
-      </button>
-    </li>
-  </ul>
+  <div class="row">
+    <div
+      class="col-md-6 col-lg-4 oversikt"
+      *ngFor="let element of lan; index as id"
+    >
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{ element.lanetakere }}</h3>
+          <p class="card-text">Beløp: {{ element.lanebelop }}</p>
+          <p class="card-text">Notat: {{ element.notat }}</p>
+        </div>
+        <div class="text-right">
+          <button
+            class="btn btn-primary"
+            routerLink="/detaljer/{{ element.id }}"
+          >
+            Rediger
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
