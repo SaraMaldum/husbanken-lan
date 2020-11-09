@@ -5,7 +5,12 @@
   <form *ngIf="item">
     <div class="form-group">
       <label>Lånetaker id </label>
-      <input class="form-control" type="text" placeholder="{{ item.id }}" />
+      <input
+        class="form-control"
+        type="text"
+        placeholder="{{ item.id }}"
+        disabled
+      />
     </div>
 
     <div class="form-group">
@@ -31,6 +36,8 @@
       <input class="form-control" type="text" placeholder="{{ item.notat }}" />
     </div>
 
-    <button class="btn btn-primary" type="submit">Oppdater</button>
+    <button class="btn btn-primary" type="submit">
+      Oppdater
+    </button>
   </form>
 </div>
