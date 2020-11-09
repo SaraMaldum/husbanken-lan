@@ -2,42 +2,31 @@
   <h2>Detaljer</h2>
   <p>*Velg lånetaker på forsiden for å få detaljer om lånet.</p>
 
-  <form *ngIf="item">
+  <form
+    *ngIf="item"
+    [formGroup]="loanDetailsForm"
+    (ngSubmit)="onSubmit(loanDetailsForm.value)"
+  >
     <div class="form-group">
       <label>Lånetaker id </label>
-      <input
-        class="form-control"
-        type="text"
-        placeholder="{{ item.id }}"
-        disabled
-      />
+      <input class="form-control" type="hidden" disabled formControlName="id" />
     </div>
 
     <div class="form-group">
       <label>Lånetakere</label>
-      <input
-        class="form-control"
-        type="text"
-        placeholder="{{ item.lanetakere.toString() }}"
-      />
+      <input formControlName="lanetakere" class="form-control" />
     </div>
 
     <div class="form-group">
       <label>Lånebeløp</label>
-      <input
-        class="form-control"
-        type="number"
-        placeholder="{{ item.lanebelop }}"
-      />
+      <input class="form-control" formControlName="lanebelop" />
     </div>
 
     <div class="form-group">
       <label>Notat</label>
-      <input class="form-control" type="text" placeholder="{{ item.notat }}" />
+      <input class="form-control" formControlName="notat" />
     </div>
 
-    <button class="btn btn-primary" type="submit">
-      Oppdater
-    </button>
+    <button class="btn btn-primary" type="submit">Oppdater</button>
   </form>
 </div>
