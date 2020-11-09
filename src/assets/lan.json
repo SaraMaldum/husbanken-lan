@@ -23,6 +23,12 @@
       "lanetakere": ["Eoitk Phjrsa", "Oyure Kjes Phjrsa", "Werte Phjrsa"],
       "lanebelop": 2450000,
       "notat": "Dette er litt tekst om lånet med id 4"
+    },
+    {
+      "id": 5,
+      "lanetakere": ["Test test"],
+      "lanebelop": 2450000,
+      "notat": "Dette er litt tekst om lånet med id 5"
     }
   ]
 }

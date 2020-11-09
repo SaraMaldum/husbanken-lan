@@ -2,10 +2,7 @@
   <h2>Oversikt</h2>
 
   <div class="row">
-    <div
-      class="col-md-6 col-lg-4 oversikt"
-      *ngFor="let element of lan; index as id"
-    >
+    <div class="col-md-3 col-lg-4 oversikt" *ngFor="let element of lanData">
       <div class="card">
         <div class="card-body">
           <h3 class="card-title">{{ element.lanetakere }}</h3>

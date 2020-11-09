@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import lan from '../../assets/lan.json';
-
 @Component({
   selector: 'app-lan-liste',
   templateUrl: './lan-liste.component.html',
   styleUrls: ['./lan-liste.component.scss'],
 })
 export class LanListeComponent implements OnInit {
-  lan = lan.lan;
+  lanData = JSON.parse(localStorage.getItem('data'));
 
-  constructor() {
-    console.log(lan.lan);
-  }
+  constructor() {}
 
   ngOnInit() {}
 }

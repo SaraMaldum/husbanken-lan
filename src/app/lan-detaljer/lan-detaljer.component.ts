@@ -9,7 +9,7 @@ import lan from '../../assets/lan.json';
   styleUrls: ['./lan-detaljer.component.scss'],
 })
 export class LanDetaljerComponent implements OnInit {
-  lanArray = lan.lan;
+  lanArray = JSON.parse(localStorage.getItem('data'));
   item;
 
   constructor(private route: ActivatedRoute) {
